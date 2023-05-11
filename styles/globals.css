@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.hover-gradient {
+		background-image: radial-gradient(circle at var(--x) var(--y), #ffffff11 0%, transparent 100%);
+	}
+
+	.shake {
+		animation: shake 0.5s ease-in-out;
+	}
+
+	@keyframes shake {
+		10%,
+		90% {
+			transform: translateX(-2px);
+		}
+		20%,
+		80% {
+			transform: translateX(2px);
+		}
+		30%,
+		50%,
+		70% {
+			transform: translateX(-2px);
+		}
+		40%,
+		60% {
+			transform: translateX(2px);
+		}
+	}
+}
+
+* {
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+	/* width: 5px; */
+}
+
+/* *::-webkit-scrollbar-track {
+	background: #1e1e1e;
+	border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: white;
+	border-radius: 20px;
+} */
